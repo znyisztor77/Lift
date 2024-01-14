@@ -30,15 +30,21 @@ namespace Lift
 
             Console.Write("3. feladat: ");
             Console.WriteLine($"Az összes lift használat: {liftAdatok.Count}");
+
             Console.Write("4. feladat: ");
             Console.WriteLine($"Időszak {liftAdatok[0].idoPont} - {liftAdatok[(liftAdatok.Count)-1].idoPont}");
+            
             Console.Write($"5. feladat: ");           
             maxCelSzint(liftAdatok);
+            
             Console.WriteLine("6. feladat: ");
             int kartya_szam = adatbeker("\t Kérem a kártya számát: ");
             int celszint = adatbeker("\t Kérem a szintet: ");
             utazasKeres(liftAdatok, kartya_szam, celszint);
+            
+            Console.WriteLine("7. feladat: ");
             statisztika(liftAdatok);
+           
             Console.ReadKey();
         }
 
